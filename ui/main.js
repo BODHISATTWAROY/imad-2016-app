@@ -1,14 +1,24 @@
 //counter code
 var button = document.getElementById("counter");
-var counter = 0;
+
 button.onclick = function() {
     
-    //Make a Request to the Counter Endpoint.
+    //Create a Request Object.
+    var request = new XMLHttp();
     
     //Capture the response and store in a variable.
-    
-    //Render the variable in the correct span.
-    counter = counter + 1;
-    var span = document.getElementById("count");
-    span.innerHTML = counter.toString();
+    request.onreadystatechange = function() {
+       if (request.readystate === XMLHttpRequest.DONE){
+           //Take Some Action
+           if (request.status === 200) {
+               var counter = request.responseText;
+               span.innerHTML = counter.toString();
+           }
+       }
+       //Not Done Yet.
+    };
+   
+   //Make the Request.
+   request.open('GET', 'http://bodhisattwaroy.imad.hasura-app.io/counter', true); 
+   request.send(null);
 };
