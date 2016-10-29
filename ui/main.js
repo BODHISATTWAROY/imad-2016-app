@@ -25,19 +25,19 @@ button.onclick = function() {
 };
 
 //Submit Name
-var nameInput = document.getElementById("name");
+var nameInput = document.getElementById('name');
 var name = nameInput.Value;
-var submit = document.getElementById("submit_btn");
+var submit = document.getElementById('submit_btn');
 submit.onclick = function() {
     //Make a Request to the Server and send the Name.
     
     //Capture a list of names and render it as a list.
-    var name = ["Name1", "Name2", "Name3", "Name4" ];
-    var list = "";
+    var name = ['Name1', 'Name2', 'Name3', 'Name4' ];
+    var list = '';
     for (var i=0;i<names.length; i++) {
-        list +=  "<li>" + names[i] + "</li>";
+        list +=  '<li>' + names[i] + '</li>';
     }
-    var ul = document.getElementById("NameList");
+    var ul = document.getElementById('NameList');
     ul.innerHTML = list;
     
 };
