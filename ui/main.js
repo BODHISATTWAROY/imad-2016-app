@@ -40,7 +40,4 @@ submit.onclick = function() {
     var ul = document.getElementById("NameList");
     ul.innerHTML = list;
     
-    
-    
-    
 };
