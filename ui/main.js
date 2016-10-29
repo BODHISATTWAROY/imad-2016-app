@@ -8,10 +8,11 @@ button.onclick = function() {
     
     //Capture the response and store in a variable.
     request.onreadystatechange = function() {
-       if (request.readystate === XMLHttpRequest.DONE){
+       if (request.readystate === XMLHttpRequest.DONE) {
            //Take Some Action
            if (request.status === 200) {
                var counter = request.responseText;
+               var span = document.getElementById('count');
                span.innerHTML = counter.toString();
            }
        }
