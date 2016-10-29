@@ -23,3 +23,12 @@ button.onclick = function() {
    request.open('GET', 'http://bodhisattwaroy.imad.hasura-app.io/counter', true); 
    request.send(null);
 };
+
+//Submit Name
+var nameInput = document.getElementById("name");
+var name = nameInput.Value;
+var submit = document.getElementById("submit_btn");
+submit.onclick = function() {
+    //Make a Request to the Server and send the Name.
+    //Capture a list of names and render it as a list.
+};
